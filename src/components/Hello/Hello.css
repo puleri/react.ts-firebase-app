@@ -1,0 +1,32 @@
+.hello-world-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.hello-world-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background: var(--fade-blk);
+  width: 300px;
+  border-radius: 15px;
+}
+.hello-world-box::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 115%;
+  height: 120%;
+  filter: blur(35px);
+}
+ .hello-world-box::before {
+  background: linear-gradient(135deg, var(--violet),var(--orange));
+  z-index: -1;
+}
+#hello-world {
+  color: var(--fade-wht);
+}

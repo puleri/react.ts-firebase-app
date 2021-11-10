@@ -21,7 +21,7 @@ const App:FC = () => {
     <Router>
       <Routes>
 
-          <Route element={<Hello />} path="/"/>
+          <Route element={<Hello />} path="/helloworld"/>
 
       </Routes>
     </Router>
