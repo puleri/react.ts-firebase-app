@@ -5,23 +5,25 @@ import { BrowserRouter as Router,
  } from 'react-router-dom';
 import Hello from './components/Hello/Hello';
 import './App.css';
+import Copy from './components/Copy/Copy';
 
-export interface RouteProps {
-  props: {
-    path?: string;
-    default?: boolean;
-    exact?: boolean;
-  }
-}
+// export interface RouteProps {
+//     path?: string | string[];
+//     element?: React.ReactElement | null;
+//     exact?: boolean;
+// }
 
 const App:FC = () => {
-
 
   return (
     <Router>
       <Routes>
 
-          <Route element={<Hello />} path="/helloworld"/>
+          <Route
+          element={<Hello />} path="/helloworld"/>
+
+          <Route
+          element={<Copy />} path="/copy"/>
 
       </Routes>
     </Router>

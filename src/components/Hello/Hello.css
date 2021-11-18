@@ -5,7 +5,7 @@
   min-height: 100vh;
 }
 .hello-world-box {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,6 +13,9 @@
   background: var(--fade-blk);
   width: 300px;
   border-radius: 15px;
+}
+.hello-world-box:hover {
+  cursor: pointer;
 }
 .hello-world-box::before {
   content: '';
