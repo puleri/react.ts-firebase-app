@@ -1,20 +1,74 @@
 .copy-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  letter-spacing: 1px;
+  letter-spacing: -1px;
   min-height: 100vh;
 }
 #code {
-  font-size: 22px;
-  border-radius: 8px;
+  font-size: 20px;
+  font-weight: lighter;
+  border-radius: 5px;
   border: 1px solid gray;
-  background: #FfFfefF6;
+  /* background: #FfFfefF6; */
   padding: 5px 10px ;
   font-family: monospace;
 }
 #code:hover {
   cursor: pointer;
+}
+
+#api-gen {
+  border: none;
+  width: min-content;
+  font-size: 90px;
+  color: transparent;
+  margin-bottom: 50px;
+  font-weight: bolder;
+  letter-spacing: -3px;
+  background-image: linear-gradient(110deg, var(--violet), var(--orange));
+  background-size: 500%;
+  background-clip: text;
+  font-family: var(--nooch);
+  animation: gradient-slide 30s infinite alternate;
+}
+@keyframes gradient-slide {
+  0% {
+    background-position: left;
+  }
+  30% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+#api-gen:hover {
+  cursor: pointer;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: var(--fade-blk);
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--fade-blk);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 .tooltip {
   position: relative;
